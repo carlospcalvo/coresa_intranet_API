@@ -1,0 +1,74 @@
+[
+    {
+        "Fecha":null,
+        "Lote":"",
+        "Marca":"MACROLED",
+        "SKU":"PR06WW",
+        "Descripcion":"PANEL PLAFON CIRCULAR MACROLED 6W AC85-265V CALIDO 3000K",
+        "Cantidad":440,
+        "Estado":"INGRESADO"
+    },
+    {
+        "Fecha":null,
+        "Lote":"",
+        "Marca":"MACROLED",
+        "SKU":"PR06CW",
+        "Descripcion":"PANEL PLAFON CIRCULAR MACROLED 6W AC85-265V FRIO 6000K",
+        "Cantidad":1000,
+        "Estado":"INGRESADO"
+    },
+    {
+        "Fecha": null,
+        "Lote":"",
+        "Marca":"MACROLED",
+        "SKU": "PEC12WW",
+        "Descripcion": "PANEL FLAT CUADRADO MACROLED 12W AC85-265V CALIDO 3000K",
+        "Cantidad": 210,
+        "Estado": "DEPOSITO NACIONAL"
+    },
+    {
+        "Fecha": null,
+        "Lote":"",
+        "Marca":"MACROLED",
+        "SKU": "PEC12CW",
+        "Descripcion": "PANEL FLAT CUADRADO MACROLED 12W AC85-265V FRIO 6000K",
+        "Cantidad": 150,
+        "Estado": "DEPOSITO NACIONAL"
+    },
+    {
+        "Fecha":null,
+        "Lote":"",
+        "Marca":"KING",
+        "SKU":"KBL-60CW",
+        "Descripcion":"BULBON ALTA POTENCIA KING 60W E27 AC185-260V FRIO 6500K",
+        "Cantidad":4000,
+        "Estado":"NACIONALIZADO"
+    },
+    {
+        "Fecha":null,
+        "Lote":"",
+        "Marca":"MACROLED",
+        "SKU":"BAP-60-E27CW",
+        "Descripcion":"BULBON ALTA POTENCIA MACROLED 60W E27 AC180-240V FRIO 6500K",
+        "Cantidad":2000,
+        "Estado":"NACIONALIZADO"
+    },
+    {
+        "Fecha":"2021-03-19T00:00:00.000Z",
+        "Lote":"004320200311",
+        "Marca":"KING",
+        "SKU":"KBL-10CW",
+        "Descripcion":"BULBO A60 KING 10W E27 AC185-260V FRIO 6500K",
+        "Cantidad":35000,
+        "Estado":"EMBARCADO"
+    },
+    {
+        "Fecha":"2021-03-23T00:00:00.000Z",
+        "Lote":null,
+        "Marca":"CHINT",
+        "SKU":"NXB-63 2P C25 6kA",
+        "Descripcion":"Int. Termomagn\u00e9tico CHINT NXB-63, In:25A, Icn:6kA, Curva C, 2-polos",
+        "Cantidad":16380,
+        "Estado":"EMBARCADO"
+    }
+]
