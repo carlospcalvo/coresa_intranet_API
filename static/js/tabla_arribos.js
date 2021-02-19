@@ -3,7 +3,7 @@ export { createTable, createFilters };
 function createTable(list) {
     const table = document.createElement("table");
 
-    table.className = "tabla_arribos";
+    table.className = "arribosdiv";
     table.id = 'tabla_arribos';
 
     if (list.length > 0) {
@@ -22,10 +22,12 @@ function createHeader(item) {
     thead.className = "thead-dark"
 
     for (const key in item) {
-        const th = document.createElement("th");
-        const text = document.createTextNode(key);
-        th.appendChild(text);
-        trow.appendChild(th);
+        if(key != 'Estado' && key != 'Fecha'){
+            const th = document.createElement("th");
+            const text = document.createTextNode(key);
+            th.appendChild(text);
+            trow.appendChild(th);
+        }
     }
 
     thead.appendChild(trow);
@@ -42,23 +44,26 @@ function createBody(lista) {
         for (const key in element) {
             const tdata = document.createElement("td");
 
-            let text;
-            if (key == "Fecha") {
-                if (element[key]) {
-                    text = document.createTextNode(element[key].substring(0, 10))
-                } else {
-                    text = document.createTextNode('Arribado!')
+            if(key != 'Estado' && key != 'Fecha'){
+                let text;
+                if (key == "Fecha") {
+                    if (element[key]) {
+                        text = document.createTextNode(element[key].substring(0, 10))
+                    } else {
+                        text = document.createTextNode('Arribado')
+                    }
+                } else if(key == 'Cantidad'){
+                    text = document.createTextNode(numberWithDot(element[key]));
+                }
+                else {
+                    
+                    text = document.createTextNode(element[key]);
                 }
 
-            } else {
-                text = document.createTextNode(element[key]);
-                //console.log('wtf')
+                tdata.appendChild(text);
+                trow.appendChild(tdata);
             }
-
-            //const text = document.createTextNode(element[key]);
-            //console.log("key: ", key)
-            tdata.appendChild(text);
-            trow.appendChild(tdata);
+            
         }
         setRowAttributes(trow, element);
         //addRowHandler(trow);
@@ -130,9 +135,15 @@ function createFilterSelect(div) {
 function setRowAttributes(tr, item) {
     if (tr) {
         for (const key in item) {
-            if (item.hasOwnProperty(key)) {
-                tr.setAttribute("data-" + key, item[key]);
+            if(key != 'Estado'){
+                if (item.hasOwnProperty(key)) {
+                    tr.setAttribute("data-" + key, item[key]);
+                }
             }
         }
     }
+}
+
+function numberWithDot(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
 }

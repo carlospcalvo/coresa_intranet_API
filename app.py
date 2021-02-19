@@ -2,9 +2,11 @@
 import json
 import os
 import sqlite3
+from collections import OrderedDict
+
 
 # Third-party libraries
-from flask import Flask, redirect, request, url_for, render_template
+from flask import Flask, redirect, request, url_for, render_template, jsonify
 from flask_login import (
     LoginManager,
     current_user,
@@ -15,13 +17,15 @@ from flask_login import (
 from oauthlib.oauth2 import WebApplicationClient
 import requests
 
+
 # Internal imports
 from db import init_db_command
 from user import User
 
 # Configuration
 GOOGLE_CLIENT_ID =  os.environ.get("GOOGLE_CLIENT_ID", None)
-GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
+#print(GOOGLE_CLIENT_ID)
+GOOGLE_CLIENT_SECRET =  os.environ.get("GOOGLE_CLIENT_SECRET", None)
 GOOGLE_DISCOVERY_URL = (
     "https://accounts.google.com/.well-known/openid-configuration"
 )
@@ -46,17 +50,22 @@ except sqlite3.OperationalError:
 # OAuth 2 client setup
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
 
+@app.route("/")
+def index():
+    return render_template('index.html')
+
 # Flask-Login helper to retrieve a user from our db
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
 
-@app.route("/")
-def index():
+@app.route("/arribos")
+def arribos():
     if current_user.is_authenticated:
         return  render_template('arribos-comerciales.html')
     else:
-        return render_template('index.html')
+        return render_template('404.html')
+
 
 #render '<a class="button" style="display: flex; align-items:center; justify-content: center;" href="/login">Google Login</a>'
 
@@ -151,5 +160,25 @@ def logout():
     logout_user()
     return redirect(url_for("index"))
 
+@app.route('/api/arribos', methods=['POST', 'GET'])
+def arribos_json():
+    json_file_path = os.getcwd() + '\\static\\data\\data.json'
+
+    if request.method == 'POST':
+        if request.data: 
+            data = request.get_json()
+            with open(json_file_path, 'w') as json_file:
+                json.dump(data, json_file, sort_keys=False)
+            return jsonify({'code': 200, 'success': 'data.json updated!'})
+        else:
+            return jsonify({'code': 204, 'error': 'Request received with empty body'})
+    elif request.method == 'GET':
+        with open(json_file_path, 'r') as json_file: 
+            data = json.load(json_file, object_pairs_hook=OrderedDict) 
+            jsonify(data)
+        return json.dumps(data)
+    else:
+        return jsonify({'code': 400, 'error': 'bad request!'})
+
 if __name__ == "__main__":
-    app.run(ssl_context="adhoc")
+    app.run(host='0.0.0.0', ssl_context="adhoc", debug=True)

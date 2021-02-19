@@ -1,74 +1,74 @@
 [
     {
-        "Fecha":null,
-        "Lote":"",
-        "Marca":"MACROLED",
-        "SKU":"PR06WW",
-        "Descripcion":"PANEL PLAFON CIRCULAR MACROLED 6W AC85-265V CALIDO 3000K",
-        "Cantidad":440,
-        "Estado":"INGRESADO"
+        "Cantidad": 2000,
+        "Descripcion": "PAR38 MACROLED 20W AC100-240V E27 CALIDO 3000K",
+        "Estado": "PRODUCCION",
+        "Fecha": "2021-05-21T00:00:00.000Z",
+        "Lote": "-",
+        "Marca": "MACROLED",
+        "SKU": "PAR38-20-E27-WW"
     },
     {
-        "Fecha":null,
-        "Lote":"",
-        "Marca":"MACROLED",
-        "SKU":"PR06CW",
-        "Descripcion":"PANEL PLAFON CIRCULAR MACROLED 6W AC85-265V FRIO 6000K",
-        "Cantidad":1000,
-        "Estado":"INGRESADO"
+        "Cantidad": 4000,
+        "Descripcion": "PLAFON PREMIUM DE ALUMINIO PARA PANEL FLAT CUADRADO 60X60",
+        "Estado": "PRODUCCION",
+        "Fecha": "2021-05-21T00:00:00.000Z",
+        "Lote": "-",
+        "Marca": "INTECK",
+        "SKU": "PPLP6060"
     },
     {
+        "Cantidad": 1000,
+        "Descripcion": "BULBON ALTA POTENCIA MACROLED 30W E27 AC180-240V CALIDO 3000K",
+        "Estado": "NACIONALIZADO",
         "Fecha": null,
-        "Lote":"",
-        "Marca":"MACROLED",
-        "SKU": "PEC12WW",
-        "Descripcion": "PANEL FLAT CUADRADO MACROLED 12W AC85-265V CALIDO 3000K",
-        "Cantidad": 210,
-        "Estado": "DEPOSITO NACIONAL"
+        "Lote": "",
+        "Marca": "MACROLED",
+        "SKU": "BAP-30-E27-WW"
     },
     {
+        "Cantidad": 15000,
+        "Descripcion": "BULBO G45 MACROLED 6W E14 AC180-240V CALIDO 3000K",
+        "Estado": "NACIONALIZADO",
         "Fecha": null,
-        "Lote":"",
-        "Marca":"MACROLED",
-        "SKU": "PEC12CW",
-        "Descripcion": "PANEL FLAT CUADRADO MACROLED 12W AC85-265V FRIO 6000K",
-        "Cantidad": 150,
-        "Estado": "DEPOSITO NACIONAL"
+        "Lote": "",
+        "Marca": "MACROLED",
+        "SKU": "G45-6-E14-WW"
     },
     {
-        "Fecha":null,
-        "Lote":"",
-        "Marca":"KING",
-        "SKU":"KBL-60CW",
-        "Descripcion":"BULBON ALTA POTENCIA KING 60W E27 AC185-260V FRIO 6500K",
-        "Cantidad":4000,
-        "Estado":"NACIONALIZADO"
+        "Cantidad": 3000,
+        "Descripcion": "PRECINTO DE NYLON 3.6MM X 150MM - NEGRO X 100 UNI",
+        "Estado": "EMBARCADO",
+        "Fecha": "2021-02-19T00:00:00.000Z",
+        "Lote": null,
+        "Marca": "INTECK",
+        "SKU": "PN36-150N"
     },
     {
-        "Fecha":null,
-        "Lote":"",
-        "Marca":"MACROLED",
-        "SKU":"BAP-60-E27CW",
-        "Descripcion":"BULBON ALTA POTENCIA MACROLED 60W E27 AC180-240V FRIO 6500K",
-        "Cantidad":2000,
-        "Estado":"NACIONALIZADO"
+        "Cantidad": 1000,
+        "Descripcion": "PANEL EMBUTIR CIRCULAR 30W AC100-265V LED COB 6000K FRIO",
+        "Estado": "EMBARCADO",
+        "Fecha": "2021-04-09T00:00:00.000Z",
+        "Lote": "003016122020",
+        "Marca": "MACROLED",
+        "SKU": "RTB30-CW"
     },
     {
-        "Fecha":"2021-03-19T00:00:00.000Z",
-        "Lote":"004320200311",
-        "Marca":"KING",
-        "SKU":"KBL-10CW",
-        "Descripcion":"BULBO A60 KING 10W E27 AC185-260V FRIO 6500K",
-        "Cantidad":35000,
-        "Estado":"EMBARCADO"
+        "Cantidad": 2500,
+        "Descripcion": "DRIVER PANEL LED 12W AC85-265V",
+        "Estado": "PRODUCCION",
+        "Fecha": "2021-04-09T00:00:00.000Z",
+        "Lote": "",
+        "Marca": "MACROLED",
+        "SKU": "PEC12DR"
     },
     {
-        "Fecha":"2021-03-23T00:00:00.000Z",
-        "Lote":null,
-        "Marca":"CHINT",
-        "SKU":"NXB-63 2P C25 6kA",
-        "Descripcion":"Int. Termomagn\u00e9tico CHINT NXB-63, In:25A, Icn:6kA, Curva C, 2-polos",
-        "Cantidad":16380,
-        "Estado":"EMBARCADO"
+        "Cantidad": 500,
+        "Descripcion": "REFLECTOR LED KING 70W AC185-260V CALIDO 3500K",
+        "Estado": "PRODUCCION",
+        "Fecha": "2021-04-09T00:00:00.000Z",
+        "Lote": "",
+        "Marca": "KING",
+        "SKU": "KFL70-WW"
     }
 ]

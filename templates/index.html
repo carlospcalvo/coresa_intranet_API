@@ -27,7 +27,12 @@
         <a href="alianzascomerciales.html" class="nav-link w-nav-link">Alianzas</a>
         <a href="rrhh.html" class="nav-link w-nav-link">RRHH</a>
         <a href="#" class="nav-link w-nav-link">Contacto</a>
+        {%- if current_user.is_authenticated -%}
+        <a href="/arribos" class="nav-link w-nav-link">Arribos</a>
+        <a href="/logout" class="nav-link w-nav-link">Salir</a>
+        {% else %}
         <a href="/login" class="nav-link w-nav-link">Ingresar</a>
+        {%- endif %}
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
